@@ -16,18 +16,12 @@ body { font-family: 'IBM Plex Sans', sans-serif; background: #F7F5F2; color: #0F
 /* ── Hero Section ── */
 .hero-section { position: relative; display: flex; align-items: center; justify-content: center; }
 
-.hero-bg-wrap {
-  position: absolute; inset: 0; z-index: 0;
-}
-.hero-bg-img {
-  width: 100%; height: 100%;
-  object-fit: cover; object-position: center;
-  display: block;
-}
-.hero-bg-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(15,20,25,.88) 0%, rgba(15,20,25,.72) 55%, rgba(27,156,133,.25) 100%);
-}
+/* ── Hero CSS-only background ── */
+.hero-section { background: #0F1419; }
+.hero-deco { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+.hero-glow-1 { position: absolute; width: 70vw; height: 70vw; max-width: 700px; max-height: 700px; background: radial-gradient(circle, rgba(27,156,133,.18) 0%, transparent 65%); top: -15%; right: -10%; border-radius: 50%; }
+.hero-glow-2 { position: absolute; width: 50vw; height: 50vw; max-width: 500px; max-height: 500px; background: radial-gradient(circle, rgba(27,156,133,.08) 0%, transparent 70%); bottom: -10%; left: -10%; border-radius: 50%; }
+.hero-grid-dots { position: absolute; inset: 0; background-image: radial-gradient(rgba(27,156,133,.1) 1px, transparent 1px); background-size: 32px 32px; }
 
 .hero-badge {
   display: inline-flex; align-items: center; gap: .5rem;
@@ -79,7 +73,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; background: #F7F5F2; color: #0F
 .btn-outline:hover { background: #0F1419; color: #F7F5F2; border-color: #0F1419; }
 
 /* ── Tags ── */
-.tag-label { display: inline-block; background: rgba(27,156,133,.1); color: #1B9C85; font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: .35rem .85rem; border-radius: 999px; border: 1px solid rgba(27,156,133,.22); }
+.tag-label { display: inline-block; background: rgba(27,156,133,.1); color: #0F1419; font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: .35rem .85rem; border-radius: 999px; border: 1px solid rgba(27,156,133,.22); }
 .tag-label-light { display: inline-block; background: rgba(247,245,242,.1); color: rgba(247,245,242,.7); font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: .35rem .85rem; border-radius: 999px; border: 1px solid rgba(247,245,242,.18); }
 
 /* ── Sections ── */
@@ -122,7 +116,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; background: #F7F5F2; color: #0F
 .bento-icon-accent { width: 2.5rem; height: 2.5rem; background: rgba(27,156,133,.1); color: #1B9C85; border-radius: .75rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
 
 .bento-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.25rem; }
-.bento-tag-dark { background: rgba(247,245,242,.12); color: rgba(247,245,242,.65); font-size: .7rem; font-weight: 600; padding: .25rem .65rem; border-radius: 999px; }
+.bento-tag-dark { background: rgba(247,245,242,.15); color: rgba(247,245,242,.88); font-size: .7rem; font-weight: 600; padding: .25rem .65rem; border-radius: 999px; }
 .bento-tag-light { background: rgba(27,156,133,.12); color: #1B9C85; font-size: .7rem; font-weight: 600; padding: .25rem .65rem; border-radius: 999px; }
 .bento-new-badge { background: #1B9C85; color: #F7F5F2; font-size: .65rem; font-weight: 700; padding: .2rem .55rem; border-radius: 999px; }
 
@@ -193,7 +187,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; background: #F7F5F2; color: #0F
 .price-card-featured .price-features li::before { color: #22B89D; }
 
 /* ── Credential tags ── */
-.credential-tag { background: rgba(247,245,242,.1); color: rgba(247,245,242,.75); font-size: .75rem; font-weight: 600; padding: .3rem .75rem; border-radius: 999px; border: 1px solid rgba(247,245,242,.15); }
+.credential-tag { background: rgba(247,245,242,.12); color: rgba(247,245,242,.92); font-size: .75rem; font-weight: 600; padding: .3rem .75rem; border-radius: 999px; border: 1px solid rgba(247,245,242,.22); }
 
 /* ── Testimonials ── */
 .testimonial-card { background: #F7F5F2; border: 1px solid rgba(15,20,25,.07); border-radius: 1.25rem; padding: 1.75rem; }
@@ -235,6 +229,36 @@ body { font-family: 'IBM Plex Sans', sans-serif; background: #F7F5F2; color: #0F
 .faq-btn.open .faq-chevron { transform: rotate(180deg); }
 .faq-answer { display: none; padding: 0 1.5rem 1.2rem; color: rgba(15,20,25,.62); font-size: .9rem; line-height: 1.75; }
 .faq-answer.open { display: block; }
+
+/* ── Markets panel (SEO Local section) ── */
+.markets-panel { background: rgba(15,20,25,.6); border: 1px solid rgba(247,245,242,.1); border-radius: 1.5rem; padding: 2rem; }
+.market-group-label { font-size: .65rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: rgba(247,245,242,.4); margin-bottom: .5rem; }
+.market-item { display: flex; align-items: flex-start; gap: .875rem; padding: .875rem 1rem; border-radius: .875rem; background: rgba(27,156,133,.06); border: 1px solid rgba(27,156,133,.12); margin-bottom: .5rem; }
+.market-dot { width: .55rem; height: .55rem; background: #1B9C85; border-radius: 50%; flex-shrink: 0; margin-top: .35rem; }
+.market-dot-intl { background: #22B89D; }
+.market-city { font-weight: 600; color: rgba(247,245,242,.9); font-size: .9rem; }
+.market-detail { font-size: .75rem; color: rgba(247,245,242,.55); margin-top: .2rem; }
+.market-stat-row { display: flex; align-items: center; gap: 1.5rem; padding-top: 1.25rem; border-top: 1px solid rgba(247,245,242,.08); }
+.market-stat { text-align: center; flex: 1; }
+.market-stat-divider { width: 1px; height: 2.5rem; background: rgba(247,245,242,.1); }
+
+/* ── Channel cards (Posicionamiento section) ── */
+.pos-channel-card { background: #F7F5F2; border: 1px solid rgba(15,20,25,.09); border-radius: 1.25rem; padding: 2rem; transition: box-shadow .25s, transform .25s; display: flex; flex-direction: column; }
+.pos-channel-card:hover { box-shadow: 0 8px 32px rgba(27,156,133,.13); transform: translateY(-2px); }
+.pos-channel-featured { background: #0F1419; border-color: rgba(27,156,133,.4); box-shadow: 0 8px 32px rgba(27,156,133,.2); }
+.pos-channel-icon { width: 3rem; height: 3rem; background: rgba(27,156,133,.1); color: #1B9C85; border-radius: .875rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; }
+.pos-channel-icon-featured { background: rgba(27,156,133,.2); }
+.pos-channel-stat { margin-top: auto; padding-top: 1.25rem; border-top: 1px solid rgba(15,20,25,.08); }
+.pos-channel-stat-dark { border-color: rgba(247,245,242,.1); }
+
+/* ── Audit CTA section ── */
+.audit-cta-section { background: #0F1419; }
+.audit-cta-inner { position: relative; border: 1px solid rgba(27,156,133,.25); border-radius: 2rem; padding: 4rem 2rem; overflow: hidden; }
+.audit-cta-glow { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(27,156,133,.2) 0%, transparent 70%); pointer-events: none; }
+.audit-cta-badge { display: inline-block; background: rgba(27,156,133,.15); border: 1px solid rgba(27,156,133,.3); color: #22B89D; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: .4rem 1rem; border-radius: 999px; }
+.audit-cta-items { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem 2rem; max-width: 36rem; margin: 0 auto; text-align: left; }
+.audit-cta-item { display: flex; align-items: flex-start; gap: .625rem; color: rgba(247,245,242,.8); font-size: .9rem; }
+@media (max-width: 640px) { .audit-cta-items { grid-template-columns: 1fr; } .audit-cta-inner { padding: 3rem 1.25rem; } }
 
 /* ── Utility ── */
 .font-display { font-family: 'Syne', sans-serif; }

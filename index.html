@@ -211,15 +211,12 @@
   </nav>
 
   <!-- ═══════════════════════ HERO ═══════════════════════ -->
-  <section id="inicio" class="hero-section relative overflow-hidden" style="min-height: 100dvh;">
-    <!-- Background image with proper cover -->
-    <div class="hero-bg-wrap">
-      <img src="img/hero.webp"
-           alt="Vista aérea de Medellín, Valle de Aburrá — Agencia SEO Medellín"
-           class="hero-bg-img"
-           width="1280" height="600"
-           fetchpriority="high">
-      <div class="hero-bg-overlay"></div>
+  <section id="inicio" class="hero-section" style="min-height: 100dvh;">
+    <!-- CSS-only decorative background -->
+    <div class="hero-deco" aria-hidden="true">
+      <div class="hero-glow-1"></div>
+      <div class="hero-glow-2"></div>
+      <div class="hero-grid-dots"></div>
     </div>
 
     <!-- Content -->
@@ -227,21 +224,22 @@
       <div class="text-center text-cream">
         <div class="hero-badge mb-6">
           <span class="hero-badge-dot"></span>
-          Agencia SEO Medellín · Valle de Aburrá
+          15 años posicionando negocios en Google
         </div>
         <h1 class="font-display font-extrabold text-cream hero-h1">
           Agencia SEO en Medellín —<br>
           <span class="text-teal">al Top de Google</span>
         </h1>
         <p class="hero-sub">
-          Posicionamiento web orgánico con estrategia local para empresas en Medellín,
-          El Poblado, Laureles, Envigado y el Área Metropolitana.
-          <strong class="text-cream">Sin humo — resultados verificables.</strong>
+          Estrategia SEO local para empresas en El Poblado, Laureles, Envigado,
+          Sabaneta y el Valle de Aburrá. Con presencia en Cartagena, Bogotá,
+          Panamá, Miami y República Dominicana.
+          <strong class="text-cream">Resultados verificables — sin humo.</strong>
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
-          <button onclick="openModal('Auditoría gratuita hero')"
+          <button onclick="openModal('Auditoría + Plan de Acción hero')"
                   class="btn-primary btn-hero cursor-pointer">
-            Quiero mi auditoría gratuita →
+            Quiero mi Auditoría + Plan de Acción Gratis →
           </button>
           <a href="https://wa.me/17867779279?text=Hola+Sergio,%20quiero+información+sobre+SEO+en+Medellín"
              target="_blank" rel="noopener"
@@ -250,7 +248,7 @@
             Hablar por WhatsApp
           </a>
         </div>
-        <p class="mt-7 text-cream/50 text-sm">Sin compromiso · Respuesta en menos de 2 horas</p>
+        <p class="mt-7 text-cream/50 text-sm">Sin compromiso · Respuesta en menos de 2 horas · 100% gratis</p>
       </div>
     </div>
 
@@ -271,8 +269,8 @@
           <p class="stat-label">Empresas posicionadas</p>
         </div>
         <div class="stat-item">
-          <p class="font-display font-extrabold text-4xl stat-num">5<span class="stat-sup">+</span></p>
-          <p class="stat-label">Años de experiencia SEO</p>
+          <p class="font-display font-extrabold text-4xl stat-num">15<span class="stat-sup">+</span></p>
+          <p class="stat-label">Años posicionando en Google</p>
         </div>
         <div class="stat-item">
           <p class="font-display font-extrabold text-4xl stat-num" data-target="3">3</p>
@@ -423,17 +421,51 @@
             </li>
           </ul>
         </div>
-        <!-- Image with proper containment -->
-        <div class="relative">
-          <div class="img-cover-box rounded-2xl overflow-hidden shadow-2xl" style="aspect-ratio: 16/10;">
-            <img src="img/medellin2.webp"
-                 alt="Medellín, ciudad de la eterna primavera — SEO local para empresas del Valle de Aburrá"
-                 class="img-cover"
-                 loading="lazy" width="1200" height="675">
+        <!-- Presencia geográfica -->
+        <div class="markets-panel">
+          <p class="font-display font-bold text-sm text-teal tracking-widest uppercase mb-5">Presencia comprobada</p>
+          <div class="space-y-3">
+            <div class="market-group-label">Colombia</div>
+            <div class="market-item">
+              <span class="market-dot"></span>
+              <div>
+                <p class="market-city">Medellín, El Poblado, Laureles</p>
+                <p class="market-detail">Envigado · Sabaneta · Itagüí · Valle de Aburrá</p>
+              </div>
+            </div>
+            <div class="market-item">
+              <span class="market-dot"></span>
+              <div>
+                <p class="market-city">Cartagena de Indias</p>
+                <p class="market-detail">Turismo · Servicios · Inmobiliaria</p>
+              </div>
+            </div>
+            <div class="market-item">
+              <span class="market-dot"></span>
+              <div>
+                <p class="market-city">Bogotá</p>
+                <p class="market-detail">B2B · SaaS · Servicios profesionales</p>
+              </div>
+            </div>
+            <div class="market-group-label mt-4">Internacional</div>
+            <div class="market-item">
+              <span class="market-dot market-dot-intl"></span>
+              <div>
+                <p class="market-city">Panamá · Miami · República Dominicana</p>
+                <p class="market-detail">Latinoamérica y mercado hispano en EE.UU.</p>
+              </div>
+            </div>
           </div>
-          <div class="absolute -bottom-5 -left-5 bg-teal text-cream rounded-2xl px-6 py-4 shadow-xl">
-            <p class="font-display font-bold text-3xl">+8M</p>
-            <p class="text-xs opacity-85 mt-0.5">búsquedas locales/mes en Medellín</p>
+          <div class="market-stat-row mt-6">
+            <div class="market-stat">
+              <p class="font-display font-bold text-2xl text-teal">+8M</p>
+              <p class="text-xs text-cream/55">búsquedas/mes<br>en Medellín</p>
+            </div>
+            <div class="market-stat-divider"></div>
+            <div class="market-stat">
+              <p class="font-display font-bold text-2xl text-teal">6</p>
+              <p class="text-xs text-cream/55">mercados<br>activos</p>
+            </div>
           </div>
         </div>
       </div>
@@ -480,52 +512,53 @@
   <!-- ═══════════════════════ POSICIONAMIENTO WEB ═══════════════════════ -->
   <section class="section-pad bg-cream">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <!-- Image with proper containment -->
-        <div class="order-2 lg:order-1">
-          <div class="img-cover-box rounded-2xl overflow-hidden shadow-xl" style="aspect-ratio: 16/10;">
-            <img src="img/analytics.webp"
-                 alt="Analítica SEO — posicionamiento web Medellín"
-                 class="img-cover"
-                 loading="lazy" width="1200" height="675">
+      <div class="text-center mb-14">
+        <span class="tag-label">3 frentes de posicionamiento</span>
+        <h2 class="font-display font-extrabold section-title mt-4 mb-4">
+          Posicionamiento Web en Medellín que Vende
+        </h2>
+        <p class="section-sub max-w-2xl mx-auto">
+          El SEO moderno no es solo Google orgánico. Dominamos los 3 puntos donde tu cliente toma la decisión de compra.
+        </p>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-6">
+        <!-- Orgánico -->
+        <div class="pos-channel-card">
+          <div class="pos-channel-icon">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-xl mb-3">Google Orgánico</h3>
+          <p class="text-navy/65 text-sm leading-relaxed mb-5">Posiciones Top 1–5 en búsquedas como "agencia SEO Medellín", "abogado El Poblado" o "clínica dental Laureles". Tráfico 24/7 sin pagar por clic.</p>
+          <div class="pos-channel-stat">
+            <p class="font-display font-bold text-2xl text-teal">+40%–200%</p>
+            <p class="text-xs text-navy/50 mt-0.5">tráfico orgánico en 12 meses</p>
           </div>
         </div>
-        <div class="order-1 lg:order-2">
-          <span class="tag-label">Múltiples frentes</span>
-          <h2 class="font-display font-extrabold section-title mt-4 mb-6">
-            Posicionamiento Web en Medellín que Vende
-          </h2>
-          <p class="text-navy/70 text-lg mb-8 leading-relaxed">
-            El posicionamiento moderno no es solo Google orgánico — es estar en cada punto donde tu cliente busca: Maps, orgánico, y ahora ChatGPT y Perplexity.
-          </p>
-          <div class="space-y-4">
-            <div class="pos-feature-row">
-              <div class="pos-feature-icon">
-                <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-              </div>
-              <div>
-                <p class="font-semibold text-sm">Posicionamiento orgánico en Google</p>
-                <p class="text-navy/55 text-xs mt-0.5">Resultados sostenibles que generan tráfico 24/7 sin pagar por clic</p>
-              </div>
-            </div>
-            <div class="pos-feature-row">
-              <div class="pos-feature-icon">
-                <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
-              </div>
-              <div>
-                <p class="font-semibold text-sm">Google Maps — Map Pack local</p>
-                <p class="text-navy/55 text-xs mt-0.5">Top 3 del mapa para búsquedas de negocios en Medellín</p>
-              </div>
-            </div>
-            <div class="pos-feature-row pos-feature-row-accent">
-              <div class="pos-feature-icon pos-feature-icon-accent">
-                <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
-              </div>
-              <div>
-                <p class="font-semibold text-sm text-teal">Posicionamiento en IA (GEO)</p>
-                <p class="text-navy/55 text-xs mt-0.5">ChatGPT, Perplexity, Google SGE — el canal de búsqueda que crece más rápido</p>
-              </div>
-            </div>
+        <!-- Maps -->
+        <div class="pos-channel-card pos-channel-featured">
+          <div class="pos-channel-icon pos-channel-icon-featured">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-xl mb-3 text-cream">Google Maps — Map Pack</h3>
+          <p class="text-cream/70 text-sm leading-relaxed mb-5">El mapa de Google en Medellín: cuando alguien busca un negocio cerca, apareces en el top 3 antes que todos. Dominamos El Poblado, Laureles, Envigado, Sabaneta, Itagüí y Centro.</p>
+          <div class="pos-channel-stat pos-channel-stat-dark">
+            <p class="font-display font-bold text-2xl text-teal">Top 3</p>
+            <p class="text-xs text-cream/55 mt-0.5">en búsquedas locales Medellín</p>
+          </div>
+        </div>
+        <!-- GEO/IA -->
+        <div class="pos-channel-card">
+          <div class="pos-channel-icon">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <div class="flex items-center gap-2 mb-3">
+            <h3 class="font-display font-bold text-xl">GEO / AEO — IA</h3>
+            <span class="bento-new-badge text-xs">2026</span>
+          </div>
+          <p class="text-navy/65 text-sm leading-relaxed mb-5">ChatGPT, Perplexity y Google SGE citan negocios y expertos. Optimizamos para que tu empresa aparezca en respuestas de IA — lo que pocas agencias en Medellín hacen hoy.</p>
+          <div class="pos-channel-stat">
+            <p class="font-display font-bold text-2xl text-teal">GEO + AEO</p>
+            <p class="text-xs text-navy/50 mt-0.5">el canal de mayor crecimiento</p>
           </div>
         </div>
       </div>
@@ -634,13 +667,6 @@
           No improvisamos. Cada proyecto SEO sigue un proceso probado en decenas de empresas en Medellín y Colombia.
         </p>
       </div>
-      <!-- Image -->
-      <div class="img-cover-box rounded-2xl overflow-hidden shadow-lg mb-12" style="aspect-ratio: 21/8;">
-        <img src="img/strategy.webp"
-             alt="Estrategia SEO — metodología de trabajo para posicionamiento en Medellín"
-             class="img-cover"
-             loading="lazy" width="1200" height="400">
-      </div>
       <!-- Steps -->
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
         <div class="step-card">
@@ -685,8 +711,8 @@
                  loading="lazy" width="560" height="680">
           </div>
           <div class="about-photo-badge">
-            <p class="font-display font-bold text-lg">5+ años</p>
-            <p class="text-xs opacity-80 mt-0.5">experiencia SEO</p>
+            <p class="font-display font-bold text-lg">15+ años</p>
+            <p class="text-xs opacity-80 mt-0.5">posicionando en Google</p>
           </div>
         </div>
         <!-- Text -->
@@ -700,9 +726,9 @@
             Trabajo directamente con cada cliente — sin juniors, sin intermediarios.
           </p>
           <p class="text-cream/65 leading-relaxed mb-8">
-            Mi enfoque combina técnica, datos y conocimiento del mercado antioqueño para construir
+            Mi enfoque combina técnica, datos y conocimiento del mercado para construir
             estrategias SEO que generan clientes reales — no solo tráfico. He ayudado a empresas en
-            <strong class="text-cream">Medellín, Bogotá, Colombia y Estados Unidos</strong> a crecer orgánicamente.
+            <strong class="text-cream">Medellín, Cartagena, Bogotá, Panamá, Miami y República Dominicana</strong> a crecer orgánicamente.
           </p>
           <div class="flex flex-wrap gap-2 mb-8">
             <span class="credential-tag">SEO Técnico</span>
@@ -721,88 +747,52 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════ PRECIOS ═══════════════════════ -->
-  <section class="section-pad bg-cream">
+  <!-- ═══════════════════════ CTA AUDITORÍA ═══════════════════════ -->
+  <section class="section-pad audit-cta-section">
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
-      <div class="text-center mb-14">
-        <span class="tag-label">Inversión</span>
-        <h2 class="font-display font-extrabold section-title mt-4 mb-4">
-          ¿Cuánto cuesta el SEO en Medellín?
-        </h2>
-        <p class="section-sub max-w-xl mx-auto">
-          El costo del SEO depende del alcance, la competencia y tus objetivos. Hacemos una auditoría gratuita para darte el presupuesto exacto.
-        </p>
-      </div>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="price-card">
-          <div class="price-icon">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+      <div class="audit-cta-inner">
+        <div class="audit-cta-glow"></div>
+        <div class="relative z-10 text-center">
+          <span class="audit-cta-badge">Sin costo · Sin compromiso · Respuesta en 2 horas</span>
+          <h2 class="font-display font-extrabold text-cream mt-6 mb-5" style="font-size: clamp(2rem, 5vw, 3.25rem); line-height: 1.1;">
+            Auditoría SEO + Plan de Acción<br>
+            <span class="text-teal">100% Gratis</span>
+          </h2>
+          <p class="text-cream/70 text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+            Antes de hablar de precios, quiero entender tu negocio. Te entrego un diagnóstico real de tu situación SEO y un plan de acción concreto — gratis, sin letra pequeña.
+          </p>
+          <div class="audit-cta-items">
+            <div class="audit-cta-item">
+              <svg class="w-5 h-5 text-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <p>Análisis técnico de tu sitio web</p>
+            </div>
+            <div class="audit-cta-item">
+              <svg class="w-5 h-5 text-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <p>Oportunidades de keywords en tu mercado</p>
+            </div>
+            <div class="audit-cta-item">
+              <svg class="w-5 h-5 text-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <p>Análisis de tus competidores en Google</p>
+            </div>
+            <div class="audit-cta-item">
+              <svg class="w-5 h-5 text-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <p>Plan de acción priorizado con pasos concretos</p>
+            </div>
           </div>
-          <h3 class="font-display font-bold text-xl mb-1">Starter SEO</h3>
-          <p class="text-navy/55 text-sm mb-4">Para pequeñas empresas y negocios locales</p>
-          <p class="price-desde">Desde</p>
-          <p class="price-amount">$1.5M COP</p>
-          <p class="price-period">/ mes · cotizar</p>
-          <ul class="price-features">
-            <li>Auditoría técnica inicial</li>
-            <li>10 keywords objetivo</li>
-            <li>Optimización on-page básica</li>
-            <li>GBP optimizado</li>
-            <li>Reporte mensual</li>
-          </ul>
-          <button onclick="openModal('Starter SEO')" class="btn-outline w-full py-3 rounded-full font-semibold mt-6 cursor-pointer">
-            Cotizar →
-          </button>
-        </div>
-
-        <div class="price-card price-card-featured">
-          <div class="price-featured-badge">Más popular</div>
-          <div class="price-icon price-icon-featured">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+            <button onclick="openModal('CTA Auditoría')"
+                    class="btn-primary px-10 py-4 rounded-full font-bold text-lg cursor-pointer">
+              Quiero mi Auditoría + Plan de Acción Gratis →
+            </button>
+            <a href="https://wa.me/17867779279?text=Hola%20Sergio%2C%20quiero%20una%20auditor%C3%ADa%20SEO%20gratuita"
+               target="_blank" rel="noopener"
+               class="btn-wa px-8 py-4 rounded-full font-bold text-center">
+              WhatsApp directo
+            </a>
           </div>
-          <h3 class="font-display font-bold text-xl mb-1 text-cream">Crecimiento SEO</h3>
-          <p class="text-cream/65 text-sm mb-4">Para empresas que quieren escalar</p>
-          <p class="price-desde text-cream/60">Desde</p>
-          <p class="price-amount text-cream">$3M COP</p>
-          <p class="price-period text-cream/60">/ mes · cotizar</p>
-          <ul class="price-features text-cream/75">
-            <li>Auditoría completa</li>
-            <li>30+ keywords objetivo</li>
-            <li>Contenido SEO mensual</li>
-            <li>Link building activo</li>
-            <li>GBP + SEO local</li>
-            <li>Reporte detallado</li>
-          </ul>
-          <button onclick="openModal('Crecimiento SEO')" class="btn-wa w-full py-3 rounded-full font-semibold mt-6 cursor-pointer">
-            Cotizar →
-          </button>
-        </div>
-
-        <div class="price-card">
-          <div class="price-icon">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-          </div>
-          <h3 class="font-display font-bold text-xl mb-1">Agencia SEO</h3>
-          <p class="text-navy/55 text-sm mb-4">Para empresas con alta competencia</p>
-          <p class="price-desde">Desde</p>
-          <p class="price-amount">$6M COP</p>
-          <p class="price-period">/ mes · cotizar</p>
-          <ul class="price-features">
-            <li>Estrategia SEO completa</li>
-            <li>Keywords ilimitadas</li>
-            <li>Contenido semanal</li>
-            <li>Link building premium</li>
-            <li>GEO/AEO incluido</li>
-            <li>Soporte prioritario</li>
-          </ul>
-          <button onclick="openModal('Agencia SEO Plan')" class="btn-outline w-full py-3 rounded-full font-semibold mt-6 cursor-pointer">
-            Cotizar →
-          </button>
+          <p class="text-cream/40 text-sm mt-5">Disponible para Medellín · Cartagena · Bogotá · Panamá · Miami · República Dominicana</p>
         </div>
       </div>
-      <p class="text-center text-navy/50 text-sm mt-8">
-        ¿No sabes cuál necesitas? La auditoría gratuita te dará claridad — sin compromiso.
-      </p>
     </div>
   </section>
 
